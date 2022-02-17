@@ -231,7 +231,7 @@ struct App {
         }
       } else if (word.rfind("-", 0) == 0) {
         // short option
-        if (word.size() == 1) {
+        if (word.size() != 2) {
           throw std::runtime_error("Illegal option: " + word);
         }
         char short_name = word[1];
